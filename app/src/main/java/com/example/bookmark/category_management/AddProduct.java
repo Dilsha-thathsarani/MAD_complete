@@ -164,7 +164,6 @@ public class AddProduct extends AppCompatActivity {
                 inputData();
             }
 
-//            private  String  title,desc,price;
             private void inputData() {
                 //input data
                 String title = t1.getText().toString().trim();
@@ -172,7 +171,6 @@ public class AddProduct extends AppCompatActivity {
                 String price = t3.getText().toString().trim();
                 String product = category.getText().toString().trim();
                 String discountPrice = discount.getText().toString().trim();
-                //String discountPrice2 = discount2.getText().toString().trim();
 
 
 

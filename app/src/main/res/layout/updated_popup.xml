@@ -28,7 +28,7 @@
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/rounded_payment"
         android:gravity="center"
         android:id="@+id/txt1"/>
 
@@ -47,7 +47,7 @@
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/rounded_payment"
         android:gravity="center"
         android:inputType="number"
         android:id="@+id/txt2"/>
@@ -67,7 +67,7 @@
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/rounded_payment"
         android:gravity="center"
         android:inputType="number"
         android:id="@+id/txt3"/>
@@ -87,7 +87,7 @@
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/rounded_payment"
         android:gravity="center"
         android:inputType="textImeMultiLine|textMultiLine"
         android:id="@+id/txt4"/>
@@ -107,7 +107,7 @@
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/rounded_payment"
         android:gravity="center"
         android:id="@+id/txt5"/>
 
@@ -118,7 +118,7 @@
         android:layout_marginLeft="130dp"
         android:layout_marginTop="3dp"
         android:layout_marginRight="80dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/rounded_payment"
         android:gravity="center"
         android:text="Update"
         android:textAllCaps="false"

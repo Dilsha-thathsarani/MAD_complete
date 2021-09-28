@@ -12,4 +12,12 @@
 
     <color name="overlayBackground">#CDC5C5</color>
     <color name="overlayActionBar">#0e0d0e</color>
+
+    <color name="navbarSelect">#E6F1F7</color>
+    <color name="navbarDark">#3C498A</color>
+    <color name="dark">#3C498A</color>
+    <color name="light">#E6F1F7</color>
+    <color name="btn_green">#4CAF50</color>
+    <color name="btn_red">#FB0000</color>
+
 </resources>

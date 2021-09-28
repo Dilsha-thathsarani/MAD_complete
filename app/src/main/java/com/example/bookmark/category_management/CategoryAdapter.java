@@ -19,6 +19,7 @@
 //import com.firebase.ui.database.FirebaseRecyclerOptions;
 //import com.google.android.gms.tasks.OnFailureListener;
 //import com.google.android.gms.tasks.OnSuccessListener;
+//import com.google.android.material.textfield.TextInputEditText;
 //import com.google.firebase.database.FirebaseDatabase;
 //import com.orhanobut.dialogplus.DialogPlus;
 //import com.orhanobut.dialogplus.ViewHolder;
@@ -34,76 +35,11 @@
 //     * {@link FirebaseRecyclerOptions} for configuration options.
 //     *
 //     * @param options
-//     */package com.example.bookmark.category_management;
+//     */
 //
-//    public class MainModel {
 //
-//        String description,discountPrice,image,price,product,title;
-//
-//        MainModel(){
-//
-//        }
-//
-//        public MainModel(String description, String discountPrice, String image, String price, String product, String title) {
-//            this.description = description;
-//            this.discountPrice = discountPrice;
-//            this.image = image;
-//            this.price = price;
-//            this.product = product;
-//            this.title = title;
-//        }
-//
-//        public String getDescription() {
-//            return description;
-//        }
-//
-//        public void setDescription(String description) {
-//            this.description = description;
-//        }
-//
-//        public String getDiscountPrice() {
-//            return discountPrice;
-//        }
-//
-//        public void setDiscountPrice(String discountPrice) {
-//            this.discountPrice = discountPrice;
-//        }
-//
-//        public String getImage() {
-//            return image;
-//        }
-//
-//        public void setImage(String image) {
-//            this.image = image;
-//        }
-//
-//        public String getPrice() {
-//            return price;
-//        }
-//
-//        public void setPrice(String price) {
-//            this.price = price;
-//        }
-//
-//        public String getProduct() {
-//            return product;
-//        }
-//
-//        public void setProduct(String product) {
-//            this.product = product;
-//        }
-//
-//        public String getTitle() {
-//            return title;
-//        }
-//
-//        public void setTitle(String title) {
-//            this.title = title;
-//        }
-//    }
-//
-//    public CategoryAdapter(@NonNull FirebaseRecyclerOptions<CategoryModule> options) {
-//        super(options);
+//    public CategoryAdapter(@NonNull FirebaseRecyclerOptions<com.example.bookmark.category_management.CategoryModule>
+//                                   options) { super(options);
 //    }
 //
 //    @Override
@@ -124,7 +60,7 @@
 //                View view = dialogPlus.getHolderView();
 //
 //                EditText category = view.findViewById(R.id.txtCAT);
-//                EditText Description = view.findViewById(R.id.txtDES);
+//
 //
 //                Button btnUpdate = view.findViewById(R.id.btnUpdate);
 //
@@ -139,21 +75,21 @@
 //                    public void onClick(View v) {
 //                        Map<String,Object> map= new HashMap<>();
 //                        map.put("category",category.getText().toString());
-//                        map.put("Description",Description.getText().toString());
+//
 //
 //                        FirebaseDatabase.getInstance().getReference().child("Categories")
 //                                .child(getRef(position).getKey()).updateChildren(map)
 //                                .addOnSuccessListener(new OnSuccessListener<Void>() {
 //                                    @Override
 //                                    public void onSuccess(Void unused) {
-//                                        Toast.makeText(holder.category.getContext(), "Updated Sucessfully", Toast.LENGTH_SHORT).show();
+//                                        Toast.makeText(holder.product.getContext(), "Updated Sucessfully", Toast.LENGTH_SHORT).show();
 //                                        dialogPlus.dismiss();
 //                                    }
 //                                })
 //                                .addOnFailureListener(new OnFailureListener() {
 //                                    @Override
 //                                    public void onFailure( Exception e) {
-//                                        Toast.makeText(holder.category.getContext(), "Error while Updating", Toast.LENGTH_SHORT).show();
+//                                        Toast.makeText(holder.product.getContext(), "Error while Updating", Toast.LENGTH_SHORT).show();
 //                                        dialogPlus.dismiss();
 //                                    }
 //                                });
@@ -167,7 +103,7 @@
 //      holder.btnDelete.setOnClickListener(new View.OnClickListener() {
 //          @Override
 //          public void onClick(View v) {
-//              AlertDialog.Builder builder = new AlertDialog.Builder(holder.category.getContext());
+//              AlertDialog.Builder builder = new AlertDialog.Builder(holder.product.getContext());
 //
 //              builder.setTitle("Are you sure ?");
 //              builder.setMessage("Deleted data can't be Undo ");
@@ -185,7 +121,7 @@
 //              builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 //                  @Override
 //                  public void onClick(DialogInterface dialog, int which) {
-//                      Toast.makeText(holder.category.getContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+//                      Toast.makeText(holder.product.getContext(), "Cancelled", Toast.LENGTH_SHORT).show();
 //                  }
 //              });
 //
@@ -207,15 +143,14 @@
 //
 //    class myViewHolder extends RecyclerView.ViewHolder{
 //
-//        TextView product;
+//        TextInputEditText product;
 //
 //        Button btnEdit,btnDelete;
 //
 //        public myViewHolder(@NonNull View itemView) {
 //            super(itemView);
 //
-//             category = (TextView)itemView.findViewById(R.id.txtname1);
-//             Description = (TextView)itemView.findViewById(R.id.txtname2);
+//             product = (TextInputEditText) itemView.findViewById(R.id.txtname1);
 //
 //            btnEdit = (Button)itemView.findViewById(R.id.btnEdit);
 //            btnDelete = (Button)itemView.findViewById(R.id.btnDelete);
