@@ -86,8 +86,11 @@ public class cardform extends AppCompatActivity {
                     card.setNumber(encryptedNumber);
                     card.setCv(cv);
                     card.setExpdate(expdate);
-                    }
+
                 isValid();  //validate card data with database
+
+                    }
+
             });
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -212,10 +215,15 @@ public class cardform extends AppCompatActivity {
 
                     if(cvvDB.equals(CvvInput) && expDB.equals(ExpInput) ){
                         if (chk.isChecked()) {
-                            reff.child(NumInput).setValue(card); //Insert data to db
-                            Toast.makeText(cardform.this, "Card Saved", Toast.LENGTH_LONG).show();
+
+                                reff.child(NumInput).setValue(card); //Insert data to db
+                                Toast.makeText(cardform.this, "Card Saved", Toast.LENGTH_LONG).show();
+
+
                         }
-                        showSuccess();
+                        if (validateInputs()) {
+                            showSuccess();
+                        }
                     }
                     else{
                         Intent intent = new Intent(cardform.this, activity_payStatus.class);
