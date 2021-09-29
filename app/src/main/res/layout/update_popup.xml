@@ -22,7 +22,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:text="Card Holder's Name"
+        android:text="Card Name"
         android:textSize="20sp" />
 
     <EditText
@@ -52,7 +52,8 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
         android:editable="false"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textColor="#F63D3D" />
 
     <TextView
         android:layout_width="match_parent"

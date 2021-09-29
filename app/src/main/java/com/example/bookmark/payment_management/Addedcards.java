@@ -2,6 +2,8 @@ package com.example.bookmark.payment_management;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +27,7 @@ public class Addedcards extends AppCompatActivity {
     DatabaseReference database;
     CardAdapter cardAdapter;
     ArrayList<Cards> list;
+    Button btnAddNew;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,15 @@ public class Addedcards extends AppCompatActivity {
         database = FirebaseDatabase.getInstance().getReference("CardData");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        btnAddNew = (Button)findViewById(R.id.btnAdd);
+
+        btnAddNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Addedcards.this, cardform.class);
+                startActivity(intent);
+            }
+        });
 
         list = new ArrayList<>();
         cardAdapter = new CardAdapter(this,list);

@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.bookmark.R;
+import com.example.bookmark.payment_management.Addedcards;
 import com.example.bookmark.payment_management.cardform;
 import com.example.bookmark.product_review.MyReview;
 import com.google.firebase.auth.FirebaseAuth;
@@ -66,7 +67,7 @@ public class UserProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(UserProfile.this, cardform.class);
+                Intent intent=new Intent(UserProfile.this, Addedcards.class);
                 startActivity(intent);
 
 

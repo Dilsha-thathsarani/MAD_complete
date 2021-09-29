@@ -7,11 +7,10 @@
     tools:context=".payment_management.Addedcards">
 
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cardlist"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="404dp"
+        android:layout_height="669dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -19,7 +18,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-<!--    <include-->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="+Add New"
+        app:backgroundTint="@color/btn_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardlist"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <!--    <include-->
 <!--        android:id="@+id/bottomNav"-->
 <!--        layout="@layout/activity_bottom_navigation" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
