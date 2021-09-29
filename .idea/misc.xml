@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/D/AndroidStudioProjects/MAD_complete/app/src/main/res/drawable-v24/selector.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/D/AndroidStudioProjects/MAD_complete/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.1921875" />
+        <entry key="..\:/Users/D/AndroidStudioProjects/MAD_complete/app/src/main/res/layout/activity_confirm_final_order.xml" value="0.1921875" />
+        <entry key="..\:/Users/D/AndroidStudioProjects/MAD_complete/app/src/main/res/layout/activity_display_books.xml" value="0.1921875" />
+        <entry key="..\:/Users/D/AndroidStudioProjects/MAD_complete/app/src/main/res/layout/activity_display_category.xml" value="0.1921875" />
+        <entry key="..\:/Users/D/AndroidStudioProjects/MAD_complete/app/src/main/res/layout/activity_edit_books.xml" value="0.1921875" />
+        <entry key="..\:/Users/D/AndroidStudioProjects/MAD_complete/app/src/main/res/layout/activity_home.xml" value="0.1921875" />
+        <entry key="..\:/Users/D/AndroidStudioProjects/MAD_complete/app/src/main/res/layout/activity_item_details.xml" value="0.1921875" />
+        <entry key="..\:/Users/D/AndroidStudioProjects/MAD_complete/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
+        <entry key="..\:/Users/D/AndroidStudioProjects/MAD_complete/app/src/main/res/menu/menu_navigation.xml" value="0.1921875" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

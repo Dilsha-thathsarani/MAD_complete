@@ -29,7 +29,7 @@ import java.util.Objects;
 
 public class UserProfile extends AppCompatActivity {
 
-   Button button2;
+   Button button2,button4;
    ImageButton imageButton2,imageButton3;
    TextView email;
    EditText name;
@@ -44,6 +44,7 @@ public class UserProfile extends AppCompatActivity {
         setContentView(R.layout.activity_user_profile);
 
         button2= findViewById(R.id.button2);
+        button4= findViewById(R.id.button4);
         imageButton2= findViewById(R.id.imageButton2);
         imageButton3= findViewById(R.id.imageButton3);
         email= findViewById(R.id.textView3);
@@ -82,7 +83,22 @@ public class UserProfile extends AppCompatActivity {
             }
         });
 
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent=new Intent(UserProfile.this, UserLogin.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+
+
     }
+
+
+
 
     private void loadData() {
       String uid=FirebaseAuth.getInstance().getUid();

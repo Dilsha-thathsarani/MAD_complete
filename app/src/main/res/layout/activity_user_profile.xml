@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user_management.UserProfile">
+    tools:context=".user_management.UserProfile"
+    tools:layout_editor_absoluteX="-5dp"
+    tools:layout_editor_absoluteY="-16dp">
 
 
     <ImageButton
@@ -17,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        app:layout_constraintVertical_bias="0.225"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
         tools:ignore="SpeakableTextPresentCheck,VectorDrawableCompat" />
 
@@ -79,7 +81,7 @@
         app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.14" />
 
     <Button
         android:id="@+id/button2"
@@ -93,10 +95,10 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPersonName"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.059" />
 
     <TextView
         android:id="@+id/textView6"
@@ -107,10 +109,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.257" />
+        app:layout_constraintVertical_bias="0.145" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="77dp"
+        android:layout_height="48dp"
+        android:background="#FFFBFB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.162"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+        tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView7"
@@ -121,10 +137,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.314" />
+        app:layout_constraintVertical_bias="0.108" />
 
     <TextView
         android:id="@+id/textView10"
@@ -154,21 +170,7 @@
         app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.76" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="77dp"
-        android:layout_height="48dp"
-        android:background="#FFFBFB"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.235"
-        app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
-        tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -189,12 +191,33 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextPersonName"
         app:layout_constraintEnd_toStartOf="@+id/textView11"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.735"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.76"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_person"
         tools:ignore="VectorDrawableCompat" />
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#B59C9C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <include
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_bottom_navigation"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
