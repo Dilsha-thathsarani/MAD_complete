@@ -19,6 +19,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.bookmark.R;
+import com.example.bookmark.category_management.DisplayBooks;
+import com.example.bookmark.category_management.ItemDetails;
 import com.example.bookmark.user_management.UserRegister;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -38,6 +40,7 @@ public class ReviewBooks extends AppCompatActivity {
     Button btnsave,btnedit,btndelete;
     Button btnReview;
     RatingBar ratingbar,rating1;
+    String book1;
 
      //ImageView bookimage;
     //String bookid;
@@ -52,21 +55,22 @@ public class ReviewBooks extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_review_books);
 
-
+        book1=getIntent().getStringExtra("book1");
         comment= findViewById(R.id.textedit11);
         btnsave= findViewById(R.id.button);
         btnedit= findViewById(R.id.button2);
         btndelete= findViewById(R.id.button3);
         ratingbar= findViewById(R.id.ratingBar2);
         bookname=findViewById(R.id.textView);
+        bookname.setText(book1);
         rating1=findViewById(R.id.rating1);
         rateSum=findViewById(R.id.rateSum);
 
-        String book1=bookname.getText().toString();
+        //String book1=bookname.getText().toString();
 
         btnReview=findViewById(R.id.reviewbtn);
 
-        //bookid=getIntent().getStringExtra("bookId");
+
         firebaseauth=FirebaseAuth.getInstance();
 
         db=FirebaseDatabase.getInstance();
@@ -220,8 +224,7 @@ public class ReviewBooks extends AppCompatActivity {
 
             Toast.makeText(ReviewBooks.this, "Thanks for your valuable review", Toast.LENGTH_LONG).show();
 
-            Intent intent=new Intent(ReviewBooks.this, ReviewBooks.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);          //Prevent comeback to register
+            Intent intent=new Intent(ReviewBooks.this, DisplayBooks.class);
             startActivity(intent);
 
         }else
@@ -249,8 +252,7 @@ public class ReviewBooks extends AppCompatActivity {
 
         Toast.makeText(ReviewBooks.this, "Review Deleted",Toast.LENGTH_LONG).show();
 
-        Intent intent=new Intent(ReviewBooks.this, UserRegister.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);          //Prevent comeback to previous
+        Intent intent=new Intent(ReviewBooks.this, DisplayBooks.class);
         startActivity(intent);
 
     }

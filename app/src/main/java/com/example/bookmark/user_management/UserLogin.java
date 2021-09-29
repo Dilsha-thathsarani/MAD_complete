@@ -77,7 +77,7 @@ public class UserLogin extends AppCompatActivity {
                                 if(userType==0){
 
                                     progressDialog.dismiss();
-                                    Intent intent=new Intent(UserLogin.this, UserProfile.class);
+                                    Intent intent=new Intent(UserLogin.this, DisplayBooks.class);
                                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                                     startActivity(intent);
                                     Toast.makeText(UserLogin.this,"Successfully Logged In",Toast.LENGTH_LONG).show();

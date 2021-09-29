@@ -14,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.example.bookmark.R;
 import com.example.bookmark.cart_management.CartActivity;
+import com.example.bookmark.product_review.ReviewBooks;
+import com.example.bookmark.user_management.UserLogin;
+import com.example.bookmark.user_management.UserProfile;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.imageview.ShapeableImageView;
@@ -35,7 +38,7 @@ public class ItemDetails extends AppCompatActivity {
 
 
 
-    private Button addToCartBtn;
+    private Button addToCartBtn,reviews;
     private ImageView productImage;
     private ElegantNumberButton numberButton;
     private TextView txt2, txt3, txt1;
@@ -44,6 +47,7 @@ public class ItemDetails extends AppCompatActivity {
     public static String TAG = "TAG";
     public String itemkey="";
     public String imgUrl ="";
+    String book1;
 
 
 
@@ -76,6 +80,7 @@ public class ItemDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_details);
 
+        reviews=findViewById(R.id.reviews);
         itemkey = getIntent().getStringExtra("itemKey");
         numberButton = (ElegantNumberButton)findViewById(R.id.number_btn);
         addToCartBtn = (Button) findViewById(R.id.add_product_to_cart_btn);
@@ -84,6 +89,8 @@ public class ItemDetails extends AppCompatActivity {
         txt2 = (TextView)findViewById(R.id.product_price_details);
         txt3 = (TextView)findViewById(R.id.product_description_details);
         //txt4 = (TextView)findViewById(R.id.product_description_details);
+
+
 
         addToCartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,6 +147,7 @@ public class ItemDetails extends AppCompatActivity {
                     txt3.setText(itemdesc);
                     imgUrl = itemimage;
 
+                    book1=txt1.getText().toString();
 
 //                    txt4.setText(itemdesc);
                 }
@@ -150,6 +158,20 @@ public class ItemDetails extends AppCompatActivity {
 
             }
         });
+
+
+       reviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(ItemDetails.this, ReviewBooks.class);
+                intent.putExtra("book1",book1);
+                startActivity(intent);
+            }
+        });
+
+
+
 
     }
     private void addingtoToCartList() {
